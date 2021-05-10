@@ -1,0 +1,153 @@
+$done:#5dc2af;
+
+@mixin dfaj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin wh {
+    width: 100%;
+    height: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+}
+
+input,
+select {
+    &:focus {
+        outline: none;
+    }
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 15px;
+
+    &.archived {
+        background: #ccc;
+
+        &:after {
+            content: "ARCHIVED";
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            top: 0;
+            font-size: 4em;
+            color: #ebebeb;
+            z-index: 0;
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    label.label {
+        z-index: 1;
+        @include dfaj();
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border: 1px solid $done;
+        border-radius: 50%;
+        cursor: pointer;
+
+        span {
+            color: $done;
+            font-size: 20px;
+        }
+    }
+
+    .content {
+        @include wh();
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+
+            .remove,
+            .archive {
+                visibility: visible
+            }
+        }
+
+        .form {
+            @include wh();
+            position: absolute;
+            display: flex;
+            z-index: 1;
+
+            form {
+                @include wh();
+
+                input {
+                    display: flex;
+                    @include wh();
+                    padding-left: 7.5px;
+                    margin-left: 7.5px;
+                }
+            }
+        }
+
+        .outputContent {
+            position: absolute;
+            @include dfaj();
+            height: 100%;
+            padding-left: 15px;
+
+            &.done {
+                text-decoration: line-through;
+                opacity: .6;
+            }
+        }
+
+        .remove,
+        .archive {
+            z-index: 1;
+            position: absolute;
+            @include dfaj();
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            visibility: hidden;
+
+            span {
+                color: #cc9a9a;
+                cursor: pointer;
+            }
+        }
+
+        .remove {
+
+            right: 20px;
+        }
+
+        .archive {
+
+            right: 50px;
+        }
+    }
+}

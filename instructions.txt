@@ -1,0 +1,14 @@
+#### CREATE TABLE ###
+
+    // db.prepare(
+    //   "CREATE TABLE todos ([id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, [content] TEXT, [done] INTEGER)"
+    // )
+    //   .run()
+    //   .finalize();
+
+
+#### INSERT INTO TABLE ####
+
+    // db.run(
+    //   "INSERT INTO todos (content, done) VALUES('Make frontend of website',0),('Make backend of website',0),('Integrate the html, css and js',0),('Run tests',0)"
+    // );

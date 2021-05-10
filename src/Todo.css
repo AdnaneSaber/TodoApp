@@ -1,0 +1,176 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 15px;
+}
+
+li.archived {
+  background: #ccc;
+}
+
+li.archived:after {
+  content: "ARCHIVED";
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  font-size: 4em;
+  color: #ebebeb;
+  z-index: 0;
+}
+
+li input {
+  display: none;
+}
+
+li label.label {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 1px solid #5dc2af;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+li label.label span {
+  color: #5dc2af;
+  font-size: 20px;
+}
+
+li .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+li .content:hover .remove,
+li .content:hover .archive {
+  visibility: visible;
+}
+
+li .content .form {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+li .content .form form {
+  width: 100%;
+  height: 100%;
+}
+
+li .content .form form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 7.5px;
+  margin-left: 7.5px;
+}
+
+li .content .outputContent {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding-left: 15px;
+}
+
+li .content .outputContent.done {
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+li .content .remove,
+li .content .archive {
+  z-index: 1;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+}
+
+li .content .remove span,
+li .content .archive span {
+  color: #cc9a9a;
+  cursor: pointer;
+}
+
+li .content .remove {
+  right: 20px;
+}
+
+li .content .archive {
+  right: 50px;
+}
+/*# sourceMappingURL=Todo.css.map */

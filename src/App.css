@@ -1,38 +1,179 @@
-.App {
+input:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 900px !important;
+  -webkit-box-shadow: 0 0 18px 7px #ccc;
+          box-shadow: 0 0 18px 7px #ccc;
+  padding: 50px 0 25px 0 !important;
+}
+
+.container h1 {
+  color: #dc3545;
   text-align: center;
+  margin-bottom: 50px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 8px 2px #ccc;
+          box-shadow: 0px 0px 8px 2px #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+.container .header .inputField {
+  width: 85%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .header .inputField form {
+  width: 100%;
+  height: 100%;
 }
+
+.container .header .inputField form input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1em;
+  border: none;
+}
+
+.container .header .inputField form input:focus {
+  outline: none;
+}
+
+.container .header .listPicker {
+  width: 15%;
+  position: relative;
+  height: 100%;
+  border-left: 1px solid #ccc;
+}
+
+.container .header .listPicker:hover button {
+  visibility: visible;
+}
+
+.container .header .listPicker button {
+  position: absolute;
+  background: #dc3545;
+  border: none;
+  visibility: hidden;
+  width: 80px;
+  border-radius: 3px;
+  right: -90px;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .header .listPicker button:before {
+  content: "";
+  width: 0px !important;
+  height: 0px !important;
+  border: 5px solid transparent;
+  border-right-color: #dc3545;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .header .listPicker select,
+.container .header .listPicker form input,
+.container .header .listPicker form {
+  width: 100%;
+  height: 100%;
+  text-align-last: center;
+  border: none;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.container .header .listPicker select.required,
+.container .header .listPicker form input.required,
+.container .header .listPicker form.required {
+  -webkit-box-shadow: 0 0 4px 3px #dc3545;
+          box-shadow: 0 0 4px 3px #dc3545;
+}
+
+.container .footer {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .footer .itemCounter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #7c7c7c;
+  font-weight: 600;
+  text-align: center;
+  margin-right: auto;
+}
+
+.container .footer .controlButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.container .footer .controlButtons .item label {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container .footer .controlButtons .item label.active {
+  border-color: #cc9a9a;
+}
+
+.container .footer .controlButtons .item input {
+  display: none;
+}
+
+.container .footer .clearFunction {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .footer .clearFunction button {
+  margin: 0;
+  color: #7c7c7c;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.container .footer .clearFunction button:hover {
+  text-decoration: underline;
+}
+
+.container ul {
+  padding: 0;
+}
+/*# sourceMappingURL=App.css.map */
